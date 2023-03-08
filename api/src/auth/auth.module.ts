@@ -5,8 +5,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserEntity } from './controllers/models/user.entity';
 
 import { JwtModule } from '@nestjs/jwt';
-import { JwtStrategy } from './services/jwt.strategy';
-import { JwtGuard } from './services/jwt.guard';
+import { JwtStrategy } from './guards/jwt.straegy';
+import { JwtGuard } from './guards/jwt.guard';
+
 @Module({
   imports: [
     JwtModule.registerAsync({
